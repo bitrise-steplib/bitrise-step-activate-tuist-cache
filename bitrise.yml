@@ -1,0 +1,34 @@
+format_version: "11"
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test_cache_warm:
+    envs:
+    - TEST_APP_URL: https://github.com/tuist/microfeatures-example.git
+    - BRANCH: master
+    before_run:
+    - _setup
+    steps:
+    - change-workdir:
+        title: Switch working dir to _tmp
+        inputs:
+        - path: ./_tmp
+    - path::./:
+        title: Execute step
+        run_if: "true"
+        is_skippable: false
+    - script:
+        title: Warm Tuist cache
+        inputs:
+        - content: tuist cache warm
+  _setup:
+    steps:
+    - script:
+        title: Delete _tmp dir
+        inputs:
+        - content: rm -rf _tmp
+    - git::https://github.com/bitrise-steplib/bitrise-step-simple-git-clone.git:
+        inputs:
+        - repository_url: $TEST_APP_URL
+        - clone_into_dir: ./_tmp
+        - branch: $BRANCH
