@@ -1,7 +1,7 @@
 #! /bin/bash
 set -euo pipefail
 
-CACHE_URL=grpcs://cache-v3.bitrise.flare.build # TODO: final endpoint
+CACHE_URL=grpcs://pluggable.services.bitrise.io
 RELEASE_URL=https://storage.googleapis.com/bitrise-tuist-fork/tuist-3.15-bitrise-999cd33.zip
 RELEASE_SHA256SUM=a56848b3cf0608e78581728b44bd63e92e8a966c68f934e8f3a6ca279266dc58
 
