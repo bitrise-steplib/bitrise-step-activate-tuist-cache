@@ -27,7 +27,7 @@ tar -xf "$DOWNLOAD_PATH" --directory="$TUIST_BIN_PATH"
 echo "Done"
 
 echo "Configuring Bitrise remote cache..."
-envman add --key TUIST_BITRISE_CACHE_URL --value $CACHE_URL
-envman add --key TUIST_BITRISE_CACHE_TOKEN --value "$BITRISEIO_BITRISE_SERVICES_ACCESS_TOKEN"
+envman add --key REMOTE_CACHE_ENDPOINT --value $CACHE_URL
+envman add --key REMOTE_CACHE_TOKEN --value "$BITRISEIO_BITRISE_SERVICES_ACCESS_TOKEN"
 echo "Done!"
 echo "Tuist commands will utilize the remote cache from now on."
