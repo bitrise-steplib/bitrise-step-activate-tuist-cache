@@ -1,7 +1,7 @@
 #! /bin/bash
 set -euo pipefail
 
-CACHE_URL=grpcs://pluggable.services.bitrise.dev
+CACHE_URL=grpcs://pluggable.services.bitrise.io
 RELEASE_URL=https://storage.googleapis.com/bitrise-tuist-fork/tuist-3.15-bitrise-d163d8f.zip
 RELEASE_SHA256SUM=cbf8be7f5b68fcfe04e8062092a9059f3b1148a780d248a68016d44d6826f0bb
 
