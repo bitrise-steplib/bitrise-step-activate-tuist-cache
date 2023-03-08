@@ -2,8 +2,8 @@
 set -euo pipefail
 
 CACHE_URL=grpcs://pluggable.services.bitrise.io
-RELEASE_URL=https://storage.googleapis.com/bitrise-tuist-fork/tuist-3.15-bitrise-d163d8f.zip
-RELEASE_SHA256SUM=cbf8be7f5b68fcfe04e8062092a9059f3b1148a780d248a68016d44d6826f0bb
+RELEASE_URL=https://storage.googleapis.com/bitrise-tuist-fork/tuist-3.15-bitrise-2315adc.zip
+RELEASE_SHA256SUM=b0dd2d57aa07948de2cbac9ff31492dcd9016662e12d5ea4365e36d5b4971d15
 
 DOWNLOAD_PATH=$TMPDIR/tuist.zip
 echo "Downloading $RELEASE_URL"
