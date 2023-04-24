@@ -1,4 +1,4 @@
-# Activate Tuist cache
+# Activate Bitrise Build Cache for Tuist
 
 This Step activates Bitrise's remote build cache for subsequent Tuist executions in the workflow.
 
