@@ -1,4 +1,4 @@
-title: Activate Remote Tuist Cache
+title: Activate Bitrise Build Cache for Tuist
 summary: Activates Bitrise Remote Build Cache for subsequent Tuist builds in the workflow
 description: |
   This Step activates Bitrise's remote build cache for subsequent Tuist executions in the workflow.
