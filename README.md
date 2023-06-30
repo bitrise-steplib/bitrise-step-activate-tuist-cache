@@ -2,12 +2,12 @@
 
 [![Step changelog](https://shields.io/github/v/release/bitrise-steplib/bitrise-step-activate-tuist-cache?include_prereleases&label=changelog&color=blueviolet)](https://github.com/bitrise-steplib/bitrise-step-activate-tuist-cache/releases)
 
-Activates Bitrise Remote Build Cache for subsequent Tuist builds in the workflow
+Activates Bitrise Remote Build Cache add-on for subsequent Tuist builds in the workflow
 
 <details>
 <summary>Description</summary>
 
-This Step activates Bitrise's remote build cache for subsequent Tuist executions in the workflow.
+This Step activates Bitrise's remote build cache add-on for subsequent Tuist executions in the workflow.
 
 After this Step executes, Tuist builds will automatically read from the remote cache and push new entries.
 
