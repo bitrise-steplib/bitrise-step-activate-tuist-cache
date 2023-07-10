@@ -12,5 +12,9 @@ support_url: https://github.com/bitrise-steplib/bitrise-step-activate-tuist-cach
 type_tags:
 - utility
 
+project_type_tags:
+- ios
+- macos
+
 run_if: .IsCI
 is_skippable: true
