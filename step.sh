@@ -1,9 +1,27 @@
 #! /bin/bash
-set -euo pipefail
+set -eo pipefail
 
 CACHE_URL=grpcs://pluggable.services.bitrise.io
 RELEASE_URL=https://bitrise-tuist.bitrise.io/tuist-3.18-bitrise-a4baa03.zip
 RELEASE_SHA256SUM=b31d9c982809a2dea0c0d7b091674bb4b9b3035d7efcb035fd1880d7284fbb88
+UNAVAILABLE_MESSAGE=$(cat <<-END
+You have added the **Activate Bitrise Build Cache for Gradle** add-on step to your workflow.
+    
+However, it has not been activated for this workspace yet. Please contact [support@bitrise.io](mailto:support@bitrise.io) to activate it.
+
+Build cache is not activated in this build.
+END
+
+)
+
+if [ "$BITRISEIO_BUILD_CACHE_ENABLED" != "true" ]; then
+  printf "\n%s\n" "$UNAVAILABLE_MESSAGE"
+  bitrise :annotation annotate "$UNAVAILABLE_MESSAGE" --style error || {
+    echo "Failed to create annotation"
+    exit 0
+  }
+  exit 0
+fi
 
 DOWNLOAD_PATH=$TMPDIR/tuist.zip
 echo "Downloading $RELEASE_URL"
