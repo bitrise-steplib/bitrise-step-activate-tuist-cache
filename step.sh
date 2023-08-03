@@ -2,8 +2,8 @@
 set -eo pipefail
 
 CACHE_URL=grpcs://pluggable.services.bitrise.io
-RELEASE_URL=https://bitrise-tuist.bitrise.io/tuist-3.18-bitrise-35f4f87.zip
-RELEASE_SHA256SUM=a42d7afbcd0667adffc3a37f8d883b201287a88de29435165728be736f08e7ed
+RELEASE_URL=https://bitrise-tuist.bitrise.io/tuist-3.21.1-bitrise-1f08276.zip
+RELEASE_SHA256SUM=c4a38def14ad258d3cdef9206f215772c695df70670b3180ec3134b50269d49f
 UNAVAILABLE_MESSAGE=$(cat <<-END
 You have added the **Activate Bitrise Build Cache for Gradle** add-on step to your workflow.
     
