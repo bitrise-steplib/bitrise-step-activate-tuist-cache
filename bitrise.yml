@@ -23,7 +23,7 @@ workflows:
     - script:
         title: Warm Tuist cache
         inputs:
-        - content: tuist cache warm
+        - content: .tuist-bin/tuist cache warm
   _setup:
     steps:
     - script:

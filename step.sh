@@ -5,7 +5,7 @@ CACHE_URL=grpcs://pluggable.services.bitrise.io
 RELEASE_URL=https://bitrise-tuist.bitrise.io/tuist-3.27.1-bitrise-64572d1e1.zip
 RELEASE_SHA256SUM=c276c72bb2480cc46851d19a192ffe3847c1765f532fef07dc35de8ca45cd8bd
 UNAVAILABLE_MESSAGE=$(cat <<-END
-You have added the **Activate Bitrise Build Cache for Gradle** add-on step to your workflow.
+You have added the **Activate Bitrise Build Cache for Tuist** add-on step to your workflow.
     
 However, it has not been activated for this workspace yet. Please contact [support@bitrise.io](mailto:support@bitrise.io) to activate it.
 
@@ -27,7 +27,7 @@ DOWNLOAD_PATH=$TMPDIR/tuist.zip
 echo "Downloading $RELEASE_URL"
 curl --fail --silent --show-error $RELEASE_URL --output "$DOWNLOAD_PATH"
 
-DOWNLOAD_CHECKSUM=$(sha256sum "$DOWNLOAD_PATH" | cut -d' ' -f1)
+DOWNLOAD_CHECKSUM=$(shasum -a 256 "$DOWNLOAD_PATH" | cut -d' ' -f1)
 
 if test $RELEASE_SHA256SUM = "$DOWNLOAD_CHECKSUM"
 then
