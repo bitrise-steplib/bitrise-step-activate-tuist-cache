@@ -2,8 +2,8 @@
 set -eo pipefail
 
 CACHE_URL=grpcs://pluggable.services.bitrise.io
-RELEASE_URL=https://bitrise-tuist.bitrise.io/tuist-3.27.1-bitrise-64572d1e1.zip
-RELEASE_SHA256SUM=c276c72bb2480cc46851d19a192ffe3847c1765f532fef07dc35de8ca45cd8bd
+RELEASE_URL=https://bitrise-tuist.bitrise.io/tuist-3.28.0-bitrise-77a93e282.zip
+RELEASE_SHA256SUM=1f83c31b2ffb15a029174923c2bf0360c7ba50bbd464cc9e121976e9df8c1055
 UNAVAILABLE_MESSAGE=$(cat <<-END
 You have added the **Activate Bitrise Build Cache for Tuist** add-on step to your workflow.
     
