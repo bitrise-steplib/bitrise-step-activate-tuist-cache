@@ -1,5 +1,8 @@
 # Activate Bitrise Build Cache for Tuist
 
+> [!WARNING]  
+> **This step is deprecated.** For the details please see: https://bitrise.io/blog/post/tuist-bitrise-build-cache-update
+
 [![Step changelog](https://shields.io/github/v/release/bitrise-steplib/bitrise-step-activate-tuist-cache?include_prereleases&label=changelog&color=blueviolet)](https://github.com/bitrise-steplib/bitrise-step-activate-tuist-cache/releases)
 
 Activates Bitrise Remote Build Cache add-on for subsequent Tuist builds in the workflow
